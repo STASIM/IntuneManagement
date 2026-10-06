@@ -1,5 +1,21 @@
 # Release Notes
 
+## Development (unreleased)
+
+**New features**
+
+- **Copilot Chat**<br />
+  A new *Copilot Chat* view that makes it possible to chat with Microsoft 365 Copilot about Intune
+  policies. Policies are loaded from the tenant or from exported json files and added as json
+  context to the chat, so questions about the policies can be asked and the policies can be
+  analyzed e.g. security risks, misconfigurations or best practices.<br />
+  The chat uses the Microsoft 365 Copilot Chat API (preview) and the data is processed by
+  Microsoft 365 Copilot within the Microsoft 365 trust boundary. No API token is needed. The
+  chat uses a separate Copilot account with a Microsoft 365 Copilot license, which can be a
+  different account than the tenant login used for the policies, and an admin consent for
+  the required Graph permissions the first time the feature is used.<br />
+  See [Copilot Chat](CopilotChatInfo.md) for more information<br />
+
 ## About version 4
 
 Version 4.0 is in beta on the `v4` branch ([4.0.0-beta1](https://github.com/Micke-K/IntuneManagement/releases/tag/4.0.0-beta1)). It is a rewrite: a single PowerShell module

@@ -179,6 +179,14 @@ Additional Intune Tools is included in the script.
 
 See [ADMX Import](ADMXImport.md) for more information about the ADMX tools
 
+## Copilot Chat
+
+The script has an extension that can chat with Microsoft 365 Copilot about Intune policies. Policies are loaded from the tenant or from exported json files and added as context to the chat so questions about the policies can be asked and the policies can be analyzed e.g. security risks, misconfigurations or best practices.
+
+The chat uses the Microsoft 365 Copilot Chat API (preview) which processes the data with Microsoft 365 Copilot within the Microsoft 365 trust boundary. No API token is needed. The chat uses a separate **Copilot account** with a **Microsoft 365 Copilot license** (Connect button in the view), which can be a different account than the tenant login used for the policies. An administrator has to consent to the required Graph permissions the first time the feature is used.
+
+See [Copilot Chat](CopilotChatInfo.md) for more information
+
 ## Columns
 
 Custom columns is supported. The script will by default add id, displayName and description with exception for some object types. These are configured in the EndpointManager.ps1 and  EndpointManagerInfo.psm1 files.
